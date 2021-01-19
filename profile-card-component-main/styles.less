@@ -1,0 +1,121 @@
+//variables
+@background-color : hsl(185, 75%, 39%);
+@primary-color    : hsl(229, 23%, 23%);
+@secondary-color  : hsl(227, 10%, 46%);
+@neutral-color    : hsl(0, 0%, 75%);
+
+@font-size             : 18px;
+@font-family-sans-serif: 'Kumbh Sans', sans-serif;
+@font-weight-default   : 400;
+@font-weight-bold      : 700;
+
+* {
+    font-family: @font-family-sans-serif;
+    font-weight: @font-weight-default;
+    font-size  : @font-size;
+    color      : @primary-color;
+    margin     : 0;
+    padding    : 0;
+}
+
+.contents {
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    min-height       : 720px;
+    max-width        : 1440px;
+    background       : url(images/bg-pattern-top.svg) right calc(50% + 520px) top -500px no-repeat, url(images/bg-pattern-bottom.svg) bottom 245% left calc(50% + 460px) no-repeat;
+    background-origin: content-box;
+    background-color : @background-color;
+    margin           : 0 auto;
+    text-align       : center;
+}
+
+.card {
+    display        : flex;
+    width          : 350px;
+    height         : 375px;
+    border-radius  : 4%;
+    background     : white;
+    flex-direction : column;
+    justify-content: space-between;
+    text-align     : center;
+    overflow       : hidden;
+    box-shadow     : 5px 5px 70px @secondary-color;
+    margin         : 0 1rem;
+}
+
+.card__header {
+    background: url(images/bg-pattern-card.svg) no-repeat;
+    height    : 500px;
+    display   : block;
+}
+
+.card__body {
+    color          : @primary-color;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+
+    h1 {
+        font-weight  : @font-weight-bold;
+        margin-bottom: 0.7rem;
+
+        .age {
+            color: @neutral-color;
+        }
+    }
+
+    h2 {
+        font-size    : 0.75rem;
+        font-weight  : @font-weight-default;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.card__picture {
+    border-radius: 50%;
+    border       : 0.25rem solid white;
+    width        : 5.25rem;
+    height       : 5.25rem;
+    position     : relative;
+    bottom       : -40%;
+    margin       : auto;
+    text-align   : center;
+}
+
+.card__footer {
+    ul {
+        list-style     : none;
+        display        : flex;
+        justify-content: space-evenly;
+        margin-bottom  : 1rem;
+        width          : 100%;
+        padding-top    : 1.65rem;
+        border-top     : 0.5px solid hsla(0, 0, 75%, 50%);
+    }
+
+    li {
+        font-weight: @font-weight-bold;
+        font-size  : 0.95rem;
+    }
+
+    .description {
+        font-size     : 0.6rem;
+        letter-spacing: 1px;
+        margin-top    : 0.35rem;
+        margin-bottom : 0.35rem;
+        color         : @secondary-color;
+    }
+}
+
+.attribution {
+    margin-top: 1rem;
+    font-size : 11px;
+    text-align: center;
+
+    a {
+        font-size: 11px;
+        color    : hsl(228, 45%, 44%);
+    }
+}
